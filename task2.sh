@@ -1,3 +1,11 @@
-@echo off
+pipeline {
+    agent any
 
-dir
+    stages {
+        stage('Execute dir command') {
+            steps {
+                bat 'dir'
+            }
+        }
+    }
+}
